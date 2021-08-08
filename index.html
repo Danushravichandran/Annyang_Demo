@@ -33,8 +33,8 @@
             {
                 console.log("Inside comments");
                 var staticURL='https://jsonplaceholder.typicode.com/'+tag;
-                 $.getJSON(staticURL);
-                console.log( $.getJSON(staticURL));
+                 $.getJSON(staticURL.responseJSON);
+                console.log( $.getJSON(staticURL.responseJSON));
                 console.log(tag);
             
             }
