@@ -8,6 +8,7 @@
 <body>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
 
         var messages = ['Hey', 'Hi, there!', 'Hi!', 'Hello'];
@@ -18,13 +19,25 @@
             var commands = {
                 'Hello' : hello,
                 'What is your name' : myname,
-                'Scroll down': scrl
+                'Scroll down': scrl,
+ 
+                'Go to *tag': gohere
             }
 
             function hello(){
                 var randomIndex = Math.round(Math.random() * messages.length);
                 console.log(`%c ${messages[randomIndex]}`,'color: green; font-weight:bold;');
             }
+
+           var gohere=function(tag)
+            {
+                var staticURL='https://jsonplaceholder.typicode.com/'+tag;
+                 $.getJSON(staticURL);
+                console.log( $.getJSON(staticURL));
+                console.log(tag);
+            
+            }
+                
 
             function myname(){
                 console.log("My name is Danush!");
