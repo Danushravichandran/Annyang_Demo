@@ -34,13 +34,14 @@
                 console.log("Inside comments");
                 var str = tag;
                 var replaced = str.split(' ').join('_');
-                var staticURL='https://my-json-server.typicode.com/Danushravichandran/mockjson/'+replaced;
-            //    $.getJSON(staticURL, function(data){
-          //           for(i=0;i<data.length;i++)
-         //       {
-        //            console.log(data[i].posts);
-         //       }
-        //    });
+                var staticURL='https://my-json-server.typicode.com/Danushravichandran/mockJson/'+replaced;
+                $.getJSON(staticURL, function(data){
+                     for(i=0;i<data.length;i++)
+                {
+                    console.log(data[i].link);
+                   // window.location.href = 'data[i].link'; 
+                }
+            });
                 console.log( $.getJSON(staticURL));
                 console.log(tag);
             
