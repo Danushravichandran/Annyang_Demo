@@ -32,7 +32,9 @@
            function gohere(tag)
             {
                 console.log("Inside comments");
-                var staticURL='https://my-json-server.typicode.com/Danushravichandran/mockjson/'+tag.split(' ').join('_');
+                var str = tag;
+                var replaced = str.split(' ').join('_');
+                var staticURL='https://my-json-server.typicode.com/Danushravichandran/mockjson/'+replaced;
             //    $.getJSON(staticURL, function(data){
           //           for(i=0;i<data.length;i++)
          //       {
