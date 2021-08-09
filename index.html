@@ -32,13 +32,13 @@
            function gohere(tag)
             {
                 console.log("Inside comments");
-                var staticURL='https://my-json-server.typicode.com/MigueldeIcaza1/mockjson/'+tag;
-                $.getJSON(staticURL, function(data){
-                     for(i=0;i<data.length;i++)
-                {
-                    console.log(data[i].posts);
-                }
-            });
+                var staticURL='https://my-json-server.typicode.com/MigueldeIcaza1/mockjson/posts'+tag;
+            //    $.getJSON(staticURL, function(data){
+          //           for(i=0;i<data.length;i++)
+         //       {
+        //            console.log(data[i].posts);
+         //       }
+        //    });
                 console.log( $.getJSON(staticURL));
                 console.log(tag);
             
