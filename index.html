@@ -32,11 +32,11 @@
            function gohere(tag)
             {
                 console.log("Inside comments");
-                var staticURL='https://jsonplaceholder.typicode.com/'+tag;
+                var staticURL='https://my-json-server.typicode.com/MigueldeIcaza1/mockjson/'+tag;
                 $.getJSON(staticURL, function(data){
                      for(i=0;i<data.length;i++)
                 {
-                    console.log(data[i].email);
+                    console.log(data[i].posts);
                 }
             });
                 console.log( $.getJSON(staticURL));
